@@ -2,7 +2,7 @@ package utils;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.core.Logger;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -24,7 +24,7 @@ public class BassClass {
     @BeforeClass
     @Parameters({"browser", "url"})
     public void setup(String browser, String url) throws IOException {
-        logger = (Logger) LogManager.getLogger(this.getClass());
+        logger = LogManager.getLogger(this.getClass());
         FileReader file = new FileReader("src//test//java//utils//ReadFromExcel.java");
         properties.load(file);
 
